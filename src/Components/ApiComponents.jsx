@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { useFetch } from '../Hooks/useFetch';
 
 export const ApiComponents = () => {
@@ -18,7 +17,7 @@ export const ApiComponents = () => {
             <div className="alert alert-danger text-center my-4" role="alert">
               Error al cargar los datos: {errors.message || 'Intenta de nuevo más tarde.'}
             </div>
-          ): <table className="table table-dark">
+          ) : <table className="table table-dark">
             <thead>
               <tr>
                 <th scope="col">ID</th>
@@ -28,16 +27,20 @@ export const ApiComponents = () => {
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <th scope="row"></th>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
+              {data.map(user => (
+                <tr key={user.id}>
+                  <th scope="row">{user.id}</th>
+                  <td>{user.name}</td>
+                  <td>{user.email}</td>
+                  <td>{user.website}</td>
+                </tr>
+              ))}
+
             </tbody>
+
           </table>
       }
-
+      <button className='btn btn-success'>Presionar</button>
     </>
   )
 }
