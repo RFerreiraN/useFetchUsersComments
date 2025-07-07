@@ -1,4 +1,6 @@
 import { useFetch } from '../Hooks/useFetch';
+import { PacmanLoader } from "react-spinners";
+
 
 export const ApiComponents = () => {
 
@@ -7,11 +9,14 @@ export const ApiComponents = () => {
   return (
     <>
       {isLoading
-        ? <div className="d-flex justify-content-center my-5">
+        ? <PacmanLoader />
+        /*
+        <div className="d-flex justify-content-center my-5">
           <div className="spinner-border text-success" role="status">
             <span className="visually-hidden">Loading...</span>
           </div>
         </div>
+        */
         : errors
           ? (
             <div className="alert alert-danger text-center my-4" role="alert">
