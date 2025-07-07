@@ -19,11 +19,11 @@ export const useFetch = (url) => {
         errors: null
       })
     } catch (error) {
-        setState({
-          data : null,
-          isLoading : false,
-          errors : error
-        })
+      setState({
+        data: null,
+        isLoading: false,
+        errors: error
+      })
     }
   }
   useEffect(() => {
@@ -31,8 +31,8 @@ export const useFetch = (url) => {
   }, [url])
 
   return {
-    data : state.data,
-    isLoading : state.isLoading,
-    errors : state.errors
+    data: state.data,
+    isLoading: state.isLoading,
+    errors: state.errors
   }
 }
