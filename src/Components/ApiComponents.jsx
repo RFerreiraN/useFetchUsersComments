@@ -1,6 +1,10 @@
 import { useState } from 'react';
+import { useFetch } from '../Hooks/useFetch';
 
 export const ApiComponents = () => {
+
+ const {data, isLoading, errors} = useFetch('https://jsonplaceholder.typicode.com/users')
+
   return (
     <>
       <table className="table table-dark">
