@@ -35,7 +35,7 @@ export const ApiComponents = () => {
                 <th scope="col">ID</th>
                 <th scope="col">Name</th>
                 <th scope="col">Email</th>
-                <th scope="col">Website</th>
+                <th scope="col">Data</th>
               </tr>
             </thead>
             <tbody>
